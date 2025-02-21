@@ -1,0 +1,18 @@
+{
+  "name": "express-install",
+  "version": "1.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "express-install": "./index.js"
+  },
+  "keywords": ["cli", "express", "passportjs", "boilerplate", "postgresql", "pg", "jwt"],
+  "author": "vertskater",
+  "license": "ISC",
+  "description": "This CLI tool automates the setup of an Express.js project with authentication using Passport.js. It generates the necessary folder structure, boilerplate code, and installs required dependencies.",
+  "dependencies": {
+    "commander": "^13.1.0"
+  }
+}
