@@ -8,7 +8,7 @@ This CLI tool automates the setup of an Express.js project with authentication u
 
 To install the CLI globally, run:
 ```sh
-npm install -g <your-cli-name>
+npm install -g express-install
 ```
 
 Or, if using locally, navigate to the project directory and run:
@@ -19,7 +19,7 @@ npm link
 ## Usage
 To create a new Express.js project, use:
 ```sh
-my-cli create <projectName>
+express-install create <projectName>
 ```
 
 ### Options
@@ -29,7 +29,7 @@ my-cli create <projectName>
 
 Example:
 ```sh
-my-cli create my-express-app --auth false
+express-install create my-express-app --auth false
 ```
 
 ## Features
@@ -82,7 +82,7 @@ npm start
 ```
 This runs:
 ```sh
-nodemon app.js --env-file=.env.development
+node app.js --env-file=.env.development --watch
 ```
 
 ## Dependencies

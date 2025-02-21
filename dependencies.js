@@ -5,5 +5,6 @@ export const dependencies = [
   'express-validator',
   'passport',
   'passport-jwt',
-  'jsonwebtoken'
+  'jsonwebtoken',
+  'dotenv'
 ]

@@ -82,7 +82,7 @@ program.command('create <projectName>')
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
 
       packageJson.scripts = packageJson.scripts || {};
-      packageJson.scripts['start'] = 'nodemon app.js --env-file=.env.development';
+      packageJson.scripts['start'] = 'node app.js --env-file=.env.development --watch';
 
       fs.writeFileSync(packageJsonPath,JSON.stringify(packageJson, null, 2));
 

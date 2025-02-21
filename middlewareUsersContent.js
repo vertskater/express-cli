@@ -1,7 +1,7 @@
 export const generateMiddlewareUsersContent = () => {
   return `
   const crypto = require("crypto");
-  const dbUser = require("../db/users");
+  const dbUser = require("../db/user");
   const utils = require("../lib/utils");
   const { body, validationResult } = require("express-validator");
   
@@ -37,7 +37,7 @@ export const generateMiddlewareUsersContent = () => {
       .withMessage("passwords do not match!"),
   ];
     const registerUser = [
-    validationSchema,
+    validateSchema,
     async (req, res, next) => {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
