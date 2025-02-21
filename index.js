@@ -71,7 +71,7 @@ program.command('create <projectName>')
       fs.writeFileSync(path.join(`${projectName}/routes`, 'users.js'), routesUsersContent);
     // create middleware files
     fs.writeFileSync(path.join(`${projectName}/middleware`, 'auth.js'), middlewareAuthContent);
-    fs.writeFileSync(path.join(`${projectName}/middleware`, 'users.js'), middlewareAuthContent);
+    fs.writeFileSync(path.join(`${projectName}/middleware`, 'users.js'), middlewareUsersContent);
 
     console.log(`Installing dependencies ...`);
     execSync('npm init -y', { cwd: projectName });
