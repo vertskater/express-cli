@@ -2,7 +2,15 @@
 
 ## Overview
 This CLI tool automates the setup of an Express.js project with authentication using Passport.js. It generates the necessary folder structure, boilerplate code, and installs required dependencies.
+## Before You Start
 
+Before running the CLI, ensure you:
+
+Execute the ```generateKeyPair.js``` file to generate key pairs.
+
+Create a PostgreSQL database.
+
+Set environment variables in ```.env.development``` to configure the PostgreSQL connection.
 ## Installation
 
 To install the CLI globally, run:
