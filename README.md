@@ -23,18 +23,20 @@ express-install create <projectName>
 ```
 
 ### Options
-| Option | Alias | Description | Default |
-|--------|-------|-------------|---------|
-| `--auth` | `-a` | Enables authentication using Passport.js | `true` |
+| Option | Alias | Description | Default  |
+|--------|-------|-------------|----------|
+| `--auth` | `-a` | Enables authentication using Passport.js | `true`   |
+ | `--prisma`| `-p`| Enables Prisma ORM | `false`  |
 
 Example:
 ```sh
-express-install create my-express-app --auth false
+express-install create my-express-app --auth false --prisma true
 ```
 
 ## Features
 - Generates a structured Express.js application.
 - Optional Passport.js authentication setup.
+- Optional Prisma ORM integration.
 - Pre-configured `.env.development` file.
 - Includes database setup with models and utilities.
 - Installs required dependencies automatically.
@@ -67,13 +69,13 @@ my-express-app/
 ```
 ## Before You Strart Using the Project
 
-Before running the start script, ensure you:
+Before running the CLI, ensure you:
 
-Execute the ```generateKeyPair.js``` file to generate key pairs.
-
-Create a PostgreSQL database.
-
-Set environment variables in ```.env.development``` to configure the PostgreSQL connection.
+ - Execute the generateKeyPair.js file to generate key pairs.
+ - Create a PostgreSQL database.
+ - Set environment variables in ```.env.development``` to configure the PostgreSQL connection.
+ - If using Prisma add the Database DSN to the ```.env``` file.
+ - If using Prisma, run ```npx prisma migrate dev``` to apply migrations.
 
 ## Scripts
 After project creation, you can start the server using:
