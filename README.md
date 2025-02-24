@@ -47,9 +47,9 @@ After running the command, the generated project will have the following structu
 my-express-app/
 ├── db/
 │   ├── database.js
-│   ├── populateDb.js
+│   ├── populateDb.js (if prisma is not enabled)
 │   ├── models/
-│   │   ├── User.js
+│   │   ├── User.js (if prisma not enabled)
 │   ├── user.js
 ├── lib/
 │   ├── generateKeyPair.js
@@ -59,6 +59,8 @@ my-express-app/
 ├── routes/
 │   ├── index.js
 │   ├── users.js
+├── prisma (if prisma enabled)
+│   ├── prisma.schema
 ├── middleware/
 │   ├── auth.js
 │   ├── users.js
@@ -84,13 +86,15 @@ npm start
 ```
 This runs:
 ```sh
-node app.js --env-file=.env.development --watch
+nodemon app.js --env-file=.env.development --watch
 ```
 
 ## Dependencies
 The CLI automatically installs the following dependencies:
 - Express
 - Passport.js (if enabled)
+- Prisma (if enabled)
+- @prisma/client (if enabled)
 - Nodemon
 - Additional dependencies required for authentication and database interaction.
 
